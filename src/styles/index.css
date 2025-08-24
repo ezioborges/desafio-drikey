@@ -1,1 +1,35 @@
-@import "tailwindcss";
+.decorative-green-diamond {
+	position: absolute;
+	transform: translate(-22rem, -17rem);
+	width: 1.25rem;
+}
+
+.decorative-yellow-circle {
+	position: absolute;
+	transform: translate(24rem, 9rem);
+	width: 4rem;
+}
+
+.decorative-blue-circle {
+	position: absolute;
+	transform: translate(-27rem, -3rem);
+	width: 5rem;
+	z-index: 1;
+}
+
+.decorative-white-circle-left {
+	position: absolute;
+	top: 14%;
+	left: 0;
+	transform: translateX(-50%);
+	width: 25rem;
+}
+
+.decorative-white-circle-right {
+	position: absolute;
+	top: 14%;
+	right: 0;
+	transform: translateX(50%);
+	width: 25rem;
+	z-index: 1;
+}

@@ -1,0 +1,75 @@
+import { Button, Form, Image, Row } from 'react-bootstrap';
+
+function Login() {
+	return (
+		<div
+			className="container-fluid d-flex flex-column align-items-center justify-content-center"
+			style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}
+		>
+			<Image
+				src="src/assets/decorative-green-diamond.svg"
+				className="decorative-green-diamond"
+			/>
+
+			<Image
+				src="src/assets/decorative-yellow-circle.svg"
+				className="decorative-yellow-circle"
+			/>
+
+			<Image
+				src="src/assets/decorative-blue-circle.svg"
+				className="decorative-blue-circle"
+			/>
+
+			<Image
+				src="src/assets/decorative-white-circle.svg"
+				className="decorative-white-circle-left"
+			/>
+
+			<Image
+				src="src/assets/decorative-white-circle.svg"
+				className="decorative-white-circle-right"
+			/>
+
+			<Row className="w-100 h-100 d-flex justify-content-center align-items-center">
+				<Form className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50">
+					<Image className="mb-4" src="/src/assets/logo.png" />
+					<Form.Group
+						className="mb-4 w-75"
+						controlId="formLoginEmail"
+					>
+						<Form.Label className="d-flex justify-content-start">
+							Email
+						</Form.Label>
+						<Form.Control type="email" placeholder="Email" />
+					</Form.Group>
+
+					<Form.Group
+						className="mb-4 w-75"
+						controlId="formLoginPassword"
+					>
+						<Form.Label className="d-flex justify-content-start">
+							Password
+						</Form.Label>
+						<Form.Control type="password" placeholder="Senha" />
+					</Form.Group>
+					<Form.Group
+						className="mb-4 d-flex w-75"
+						controlId="formBasicCheckbox"
+					>
+						<Form.Check type="checkbox" label="Lembre-me" />
+					</Form.Group>
+					<Button
+						variant="outline-danger"
+						type="submit"
+						className="w-75"
+					>
+						Entrar
+					</Button>
+				</Form>
+			</Row>
+		</div>
+	);
+}
+
+export default Login;

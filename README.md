@@ -5,3 +5,4 @@ React
 Prettier
 ESlint
 React router
+uuid

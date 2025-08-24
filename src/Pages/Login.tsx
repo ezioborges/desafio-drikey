@@ -1,6 +1,30 @@
-import { Button, Form, Image, Row } from 'react-bootstrap';
+import { useState, type FormEvent } from 'react';
+import { Alert, Button, Form, Image, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { loginValidation } from '../Validations/loginValidation';
 
 function Login() {
+	const navigate = useNavigate();
+
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [error, setError] = useState('');
+
+	const login = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setError('');
+
+		const result = loginValidation(email.trim(), password.trim());
+
+		if (result.success) {
+			navigate('/home');
+			console.log(result.message, result.user);
+		} else {
+			setError(result.message);
+			console.log(result.message);
+		}
+	};
+
 	return (
 		<div
 			className="container-fluid d-flex flex-column align-items-center justify-content-center"
@@ -32,7 +56,11 @@ function Login() {
 			/>
 
 			<Row className="w-100 h-100 d-flex justify-content-center align-items-center">
-				<Form className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50">
+				<Form
+					onSubmit={login}
+					className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50"
+				>
+					{error && <Alert variant="danger">{error}</Alert>}
 					<Image className="mb-4" src="/src/assets/logo.png" />
 					<Form.Group
 						className="mb-4 w-75"
@@ -41,7 +69,12 @@ function Login() {
 						<Form.Label className="d-flex justify-content-start">
 							Email
 						</Form.Label>
-						<Form.Control type="email" placeholder="Email" />
+						<Form.Control
+							type="email"
+							value={email}
+							onChange={({ target }) => setEmail(target.value)}
+							placeholder="Email"
+						/>
 					</Form.Group>
 
 					<Form.Group
@@ -51,11 +84,16 @@ function Login() {
 						<Form.Label className="d-flex justify-content-start">
 							Password
 						</Form.Label>
-						<Form.Control type="password" placeholder="Senha" />
+						<Form.Control
+							type="password"
+							value={password}
+							onChange={({ target }) => setPassword(target.value)}
+							placeholder="Senha"
+						/>
 					</Form.Group>
 					<Form.Group
 						className="mb-4 d-flex w-75"
-						controlId="formBasicCheckbox"
+						controlId="formLoginCheckbox"
 					>
 						<Form.Check type="checkbox" label="Lembre-me" />
 					</Form.Group>

@@ -17,7 +17,7 @@ function Login() {
 		const result = loginValidation(email.trim(), password.trim());
 
 		if (result.success) {
-			navigate('/home');
+			navigate('/dashboard');
 			console.log(result.message, result.user);
 		} else {
 			setError(result.message);

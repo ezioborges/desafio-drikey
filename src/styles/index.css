@@ -1,23 +1,23 @@
-.decorative-green-diamond {
+img.decorative-green-diamond {
 	position: absolute;
 	transform: translate(-22rem, -17rem);
-	width: 3vw;
+	width: 6vw;
 }
 
-.decorative-yellow-circle {
+img.decorative-yellow-circle {
 	position: absolute;
 	transform: translate(24rem, 9rem);
-	width: 11vh;
+	width: 22vh;
 }
 
-.decorative-blue-circle {
+img.decorative-blue-circle {
 	position: absolute;
-	transform: translate(-27rem, -3rem);
-	width: 9vw;
+	transform: translate(-25rem, -3rem);
+	width: 12vw;
 	z-index: 1;
 }
 
-.decorative-white-circle-left {
+img.decorative-white-circle-left {
 	position: absolute;
 	top: 14%;
 	left: 0;
@@ -25,7 +25,7 @@
 	width: 35vw;
 }
 
-.decorative-white-circle-right {
+img.decorative-white-circle-right {
 	position: absolute;
 	top: 14%;
 	right: 0;
@@ -34,23 +34,97 @@
 	z-index: 1;
 }
 
-@media (min-width: 2560px) {
-	.decorative-green-diamond {
-		transform: translate(-27vw, -14.5vw);
-		width: 3rem;
+@media (min-width: 576px) {
+	img.decorative-green-diamond {
+		transform: translate(-34vw, -38.5vw);
+		width: 9vw;
 	}
-	.decorative-yellow-circle {
+	img.decorative-yellow-circle {
+		transform: translate(40vw, 14vw);
+		width: 12vw;
+	}
+	img.decorative-blue-circle {
+		transform: translate(-38vw, 0);
+		width: 12vw;
+	}
+	img.decorative-white-circle-left {
+		transform: translate(-50%, 105%);
+		width: 25vw;
+	}
+	img.decorative-white-circle-right {
+		transform: translate(50%, 105%);
+		width: 25vw;
+	}
+}
+
+@media (min-width: 768px) {
+	img.decorative-green-diamond {
+		transform: translate(-28vw, -29.5vw);
+		width: 8vw;
+	}
+	img.decorative-yellow-circle {
+		transform: translate(33vw, 14vw);
+		width: 12vw;
+	}
+	img.decorative-blue-circle {
+		transform: translate(-38vw, 0);
+		width: 12vw;
+	}
+	img.decorative-white-circle-left {
+		transform: translate(-50%, 60%);
+		width: 25vw;
+	}
+	img.decorative-white-circle-right {
+		transform: translate(50%, 60%);
+		width: 25vw;
+	}
+}
+
+@media (min-width: 992px) {
+	img.decorative-green-diamond {
+		transform: translate(-27vw, -23.5vw);
+		width: 7vw;
+	}
+	img.decorative-yellow-circle {
+		transform: translate(33vw, 14vw);
+		width: 12vw;
+	}
+	img.decorative-blue-circle {
+		transform: translate(-38vw, 0);
+		width: 12vw;
+	}
+	img.decorative-white-circle-left {
+		transform: translate(-50%, 30%);
+		width: 25vw;
+	}
+	img.decorative-white-circle-right {
+		transform: translate(50%, 30%);
+		width: 25vw;
+	}
+}
+
+@media (min-width: 2560px) {
+	.drikey-logo {
+		width: 30%;
+	}
+	img.decorative-green-diamond {
+		transform: translate(-27vw, -11.5vw);
+		width: 4vw;
+	}
+	img.decorative-yellow-circle {
 		transform: translate(31vw, 9vw);
 		width: 7vw;
 	}
-	.decorative-blue-circle {
+	img.decorative-blue-circle {
 		transform: translate(-38vw, 0);
 		width: 9vw;
 	}
-	.decorative-white-circle-left {
+	img.decorative-white-circle-left {
+		transform: translate(-13vw, 1vw);
 		width: 25vw;
 	}
-	.decorative-white-circle-right {
+	img.decorative-white-circle-right {
+		transform: translate(13vw, 1vw);
 		width: 25vw;
 	}
 }

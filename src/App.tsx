@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import PrivateRoute from './component/ProtectedRouter';
+import PrivateRoute from './components/ProtectedRouter';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 

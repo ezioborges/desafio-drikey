@@ -2,6 +2,7 @@ import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { validateMockJWT } from '../mock/mockJWT';
+import IsLoading from './IsLoading';
 
 const PrivateRoute = () => {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -26,7 +27,7 @@ const PrivateRoute = () => {
 	}, []);
 
 	if (isLoading) {
-		return <div>Carregando...</div>;
+		return IsLoading();
 	}
 
 	return isAuthenticated ? <Outlet /> : <Navigate to="/" />;

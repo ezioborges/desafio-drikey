@@ -7,3 +7,7 @@ export type MockUsersType = {
 	avatarUrl: string;
 	roles: string[];
 };
+
+export type userPropsType = {
+	user: MockUsersType | null;
+};

@@ -22,8 +22,6 @@ function Login() {
 
 		const result = await loginValidation(email.trim(), password.trim());
 
-		console.log('result ===> ', result);
-
 		const validRoles =
 			result.roles?.includes('admin') || result.roles?.includes('user');
 

@@ -34,6 +34,7 @@ img.decorative-white-circle-right {
 	z-index: 1;
 }
 
+/* TODO: resolver o problema do tamanho da logo */
 @media (max-width: 575px) {
 	.decorative-green-diamond,
 	.decorative-yellow-circle,
@@ -42,9 +43,15 @@ img.decorative-white-circle-right {
 	.decorative-white-circle-right {
 		display: none;
 	}
+	img.drikey-logo {
+		width: 40vw !important;
+	}
 }
 
 @media (min-width: 576px) {
+	img.drikey-logo {
+		width: 30%;
+	}
 	img.decorative-green-diamond {
 		transform: translate(-34vw, -38.5vw);
 		width: 9vw;

@@ -1,9 +1,9 @@
-export type UserType = {
+export type MockUsersType = {
 	id: string;
 	email: string;
 	password: string;
 	firstName: string;
 	secondName: string;
 	avatarUrl: string;
-	role: string;
+	roles: string[];
 };

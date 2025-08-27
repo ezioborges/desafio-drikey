@@ -1,6 +1,6 @@
-import type { UserType } from '../types/UserType';
+import type { MockUsersType } from '../types/UserType';
 
-export const users: UserType[] = [
+export const mockUsers: MockUsersType[] = [
 	{
 		id: '7fe9e09d-9472-4e0e-94a1-7710d5b60b4b',
 		email: 'admin@drikey.com',
@@ -8,15 +8,24 @@ export const users: UserType[] = [
 		firstName: 'Admin',
 		secondName: 'Admin',
 		avatarUrl: '../assets/avatar.png',
-		role: 'admin',
+		roles: ['admin', 'user'],
 	},
 	{
 		id: '67707ed1-1cb5-4153-beea-ae466c88d441',
-		email: 'user@drikey.com',
+		email: 'consumer@drikey.com',
 		password: 'Senhaforte12@',
 		firstName: 'User',
 		secondName: 'User',
 		avatarUrl: '../assets/avatar.png',
-		role: 'user',
+		roles: ['user'],
+	},
+	{
+		id: '9b11b676-48ae-4ba7-9323-6ca51e6a1c8c',
+		email: 'unauthorized@unauthorized.com',
+		password: 'Senhaforte12@',
+		firstName: 'unauthorized',
+		secondName: 'User',
+		avatarUrl: '../assets/avatar.png',
+		roles: ['unauthorized'],
 	},
 ];

@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import { useState, type FormEvent } from 'react';
 import { Alert, Button, Form, Image, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -10,18 +11,28 @@ function Login() {
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');
 
-	const login = (e: FormEvent<HTMLFormElement>) => {
+	const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setError('');
 
-		const result = loginValidation(email.trim(), password.trim());
+		const result = await loginValidation(email.trim(), password.trim());
+
+		const validRoles =
+			result.roles?.includes('admin') || result.roles?.includes('user');
 
 		if (result.success) {
-			navigate('/dashboard');
-			console.log(result.message, result.user);
+			if (validRoles) {
+				if (result.token) {
+					Cookies.set('mock_jwt', result.token, { expires: 1 / 24 });
+					navigate('/dashboard');
+				} else {
+					setError('Token inválido.');
+				}
+			} else {
+				setError('Sem permissão de acesso.');
+			}
 		} else {
 			setError(result.message);
-			console.log(result.message);
 		}
 	};
 
@@ -57,7 +68,7 @@ function Login() {
 
 			<Row className="w-100 h-100 d-flex justify-content-center align-items-center">
 				<Form
-					onSubmit={login}
+					onSubmit={handleLogin}
 					className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50"
 				>
 					{error && <Alert variant="danger">{error}</Alert>}

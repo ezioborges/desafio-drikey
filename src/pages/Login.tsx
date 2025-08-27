@@ -3,6 +3,7 @@ import { useState, type FormEvent } from 'react';
 import { Alert, Button, Form, Image, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { loginValidation } from '../Validations/loginValidation';
+import greenDiamond from '../assets/decorative-green-diamond.svg';
 
 function Login() {
 	const navigate = useNavigate();
@@ -41,10 +42,7 @@ function Login() {
 			className="container-fluid d-flex flex-column align-items-center justify-content-center"
 			style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}
 		>
-			<Image
-				src="src/assets/decorative-green-diamond.svg"
-				className="decorative-green-diamond"
-			/>
+			<Image src={greenDiamond} className="decorative-green-diamond" />
 
 			<Image
 				src="src/assets/decorative-yellow-circle.svg"
@@ -72,7 +70,7 @@ function Login() {
 					className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50"
 				>
 					{error && <Alert variant="danger">{error}</Alert>}
-					<Image className="mb-4" src="../assets/logo.png" />
+					<Image className="mb-4" src="/src/assets/logo.png" />
 					<Form.Group
 						className="mb-4 w-75"
 						controlId="formLoginEmail"

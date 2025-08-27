@@ -3,7 +3,10 @@ import { useState, type FormEvent } from 'react';
 import { Alert, Button, Form, Image, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { loginValidation } from '../Validations/loginValidation';
+import blueCircle from '../assets/decorative-blue-circle.svg';
 import greenDiamond from '../assets/decorative-green-diamond.svg';
+import whiteCircle from '../assets/decorative-white-circle.svg';
+import yellowCircle from '../assets/decorative-yellow-circle.svg';
 
 function Login() {
 	const navigate = useNavigate();
@@ -44,23 +47,14 @@ function Login() {
 		>
 			<Image src={greenDiamond} className="decorative-green-diamond" />
 
-			<Image
-				src="src/assets/decorative-yellow-circle.svg"
-				className="decorative-yellow-circle"
-			/>
+			<Image src={yellowCircle} className="decorative-yellow-circle" />
+
+			<Image src={blueCircle} className="decorative-blue-circle" />
+
+			<Image src={whiteCircle} className="decorative-white-circle-left" />
 
 			<Image
-				src="src/assets/decorative-blue-circle.svg"
-				className="decorative-blue-circle"
-			/>
-
-			<Image
-				src="src/assets/decorative-white-circle.svg"
-				className="decorative-white-circle-left"
-			/>
-
-			<Image
-				src="src/assets/decorative-white-circle.svg"
+				src={whiteCircle}
 				className="decorative-white-circle-right"
 			/>
 

@@ -118,16 +118,10 @@ function Login() {
 								placeholder="Senha"
 							/>
 						</Form.Group>
-						<Form.Group
-							className="mb-4 d-flex"
-							controlId="formLoginCheckbox"
-						>
-							<Form.Check type="checkbox" label="Lembre-me" />
-						</Form.Group>
 						<Button
 							variant="outline-danger"
 							type="submit"
-							className="w-100"
+							className="w-75 mt-4"
 						>
 							Entrar
 						</Button>

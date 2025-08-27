@@ -7,6 +7,7 @@ import blueCircle from '../assets/decorative-blue-circle.svg';
 import greenDiamond from '../assets/decorative-green-diamond.svg';
 import whiteCircle from '../assets/decorative-white-circle.svg';
 import yellowCircle from '../assets/decorative-yellow-circle.svg';
+import drikeyLogo from '../assets/logo.png';
 
 function Login() {
 	const navigate = useNavigate();
@@ -64,7 +65,7 @@ function Login() {
 					className="d-flex flex-column justify-content-center align-items-center rounded-3 shadow-sm bg-white h-75 w-50"
 				>
 					{error && <Alert variant="danger">{error}</Alert>}
-					<Image className="mb-4" src="/src/assets/logo.png" />
+					<Image className="mb-4" src={drikeyLogo} />
 					<Form.Group
 						className="mb-4 w-75"
 						controlId="formLoginEmail"

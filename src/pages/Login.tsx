@@ -44,7 +44,7 @@ function Login() {
 	return (
 		<>
 			<Row
-				className="d-flex justify-content-center align-items-center"
+				className="d-flex justify-content-center align-items-center overflow-hidden"
 				style={{ height: '100vh', width: '100vw' }}
 			>
 				<Image

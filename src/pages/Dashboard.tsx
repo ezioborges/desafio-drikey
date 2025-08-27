@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
+import headerIphone from '../assets/header-iphone.png';
 import IsLoading from '../components/IsLoading';
 import NavBar from '../components/NavBar';
 import type { MockUsersType } from '../types/UserType';
@@ -38,7 +39,7 @@ const Dashboard = () => {
 				</h3>
 				<Image
 					className=""
-					src="/src/assets/header-iphone.png"
+					src={headerIphone}
 					style={{ width: '55vw' }}
 				/>
 			</Col>

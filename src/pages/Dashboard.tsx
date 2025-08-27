@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Image, Row } from 'react-bootstrap';
 import IsLoading from '../components/IsLoading';
 import NavBar from '../components/NavBar';
 import type { MockUsersType } from '../types/UserType';
@@ -25,14 +25,22 @@ const Dashboard = () => {
 
 	return (
 		<Row
-			className="container-fluid d-flex flex-column border border-danger m-0 p-0"
+			className="container-fluid d-flex flex-column border m-0 p-0"
 			style={{ height: '100vh', width: '100vw' }}
 		>
-			<Col className="border border-primary m-0 mb-2" xs={'auto'}>
+			<Col className="m-0 shadow-sm" xs={12}>
 				<NavBar user={user} />
 			</Col>
-			<Col className="border border-success" xs={'auto'}>
-				<h1>Testando a DashPage BODY</h1>
+			<Col className="d-flex flex-column align-items-center justify-content-around">
+				<h1 className="">Portaria Via Aplicativo</h1>
+				<h3 className="">
+					Controle de acesso e seu interfone em suas mãos
+				</h3>
+				<Image
+					className=""
+					src="/src/assets/header-iphone.png"
+					style={{ width: '55vw' }}
+				/>
 			</Col>
 		</Row>
 	);

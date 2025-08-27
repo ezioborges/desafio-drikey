@@ -4,7 +4,7 @@ export const mockUsers: MockUsersType[] = [
 	{
 		id: '7fe9e09d-9472-4e0e-94a1-7710d5b60b4b',
 		email: 'admin@drikey.com',
-		password: 'Senhaforte12',
+		password: '123456',
 		firstName: 'Admin',
 		secondName: 'Admin',
 		avatarUrl: '../assets/avatar.png',

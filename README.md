@@ -16,7 +16,7 @@ Também foi desenvolvido uma opção para realizar logout de formna segura.
   </summary>
   <!-- conteúdo -->
   
-Para rodar este projeto localmente, siga os passos abaixo:
+Abra o terminal e siga as instruções abaixo para rodar o projeto localmente:
 
 1.  **Clone este repositório**
 

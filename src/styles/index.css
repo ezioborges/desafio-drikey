@@ -34,6 +34,16 @@ img.decorative-white-circle-right {
 	z-index: 1;
 }
 
+@media (max-width: 575px) {
+	.decorative-green-diamond,
+	.decorative-yellow-circle,
+	.decorative-blue-circle,
+	.decorative-white-circle-left,
+	.decorative-white-circle-right {
+		display: none;
+	}
+}
+
 @media (min-width: 576px) {
 	img.decorative-green-diamond {
 		transform: translate(-34vw, -38.5vw);

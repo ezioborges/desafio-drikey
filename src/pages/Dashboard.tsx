@@ -37,11 +37,7 @@ const Dashboard = () => {
 				<h3 className="">
 					Controle de acesso e seu interfone em suas mãos
 				</h3>
-				<Image
-					className=""
-					src={headerIphone}
-					style={{ width: '55vw' }}
-				/>
+				<Image src={headerIphone} style={{ width: '35vw' }} />
 			</Col>
 		</Row>
 	);

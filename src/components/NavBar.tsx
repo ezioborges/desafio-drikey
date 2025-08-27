@@ -17,17 +17,22 @@ const NavBar = ({ user }: userPropsType) => {
 			onSelect={selectedKey => alert(`selected ${selectedKey}`)}
 			className="d-flex justify-content-between align-items-center"
 		>
-			<Nav.Item className="w-25">
+			<Nav.Item className="w-25 border">
 				<Nav.Link href="/dashboard">
-					<Image src="/src/assets/logo.png" />
+					<Image
+						src="/src/assets/logo.png"
+						style={{ maxWidth: '30vw' }}
+					/>
 				</Nav.Link>
 			</Nav.Item>
-			<Nav.Item className="w-25 d-flex align-items-end justify-content-center">
-				<Nav.Link href="/test" className="text-dark">
-					<h5>Seja bem-vindo, {user?.firstName}!</h5>
+			<Nav.Item className="w-25 border d-flex align-items-center justify-content-center">
+				<Nav.Link href="/test" className="text-dark ">
+					<h5 className="text-center">
+						Seja bem-vindo, {user?.firstName}!
+					</h5>
 				</Nav.Link>
 			</Nav.Item>
-			<Nav.Item className="w-25 d-flex justify-content-end">
+			<Nav.Item className="w-25 border d-flex justify-content-center">
 				<Nav.Link
 					href="/"
 					className="text-danger fw-bolder logout-action"

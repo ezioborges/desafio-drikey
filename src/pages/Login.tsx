@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { Alert, Button, Col, Form, Image, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import blueCircle from '../assets/decorative-blue-circle.svg';
@@ -15,6 +15,10 @@ function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');
+
+	useEffect(() => {
+		Cookies.remove('mock_jwt');
+	}, []);
 
 	const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();

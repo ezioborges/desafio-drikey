@@ -2,12 +2,12 @@ import Cookies from 'js-cookie';
 import { useState, type FormEvent } from 'react';
 import { Alert, Button, Col, Form, Image, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { loginValidation } from '../Validations/loginValidation';
 import blueCircle from '../assets/decorative-blue-circle.svg';
 import greenDiamond from '../assets/decorative-green-diamond.svg';
 import whiteCircle from '../assets/decorative-white-circle.svg';
 import yellowCircle from '../assets/decorative-yellow-circle.svg';
 import drikeyLogo from '../assets/logo.png';
+import { loginValidation } from '../validations/loginValidation';
 
 function Login() {
 	const navigate = useNavigate();
@@ -22,13 +22,18 @@ function Login() {
 
 		const result = await loginValidation(email.trim(), password.trim());
 
+		console.log('result ===> ', result);
+
 		const validRoles =
 			result.roles?.includes('admin') || result.roles?.includes('user');
 
 		if (result.success) {
 			if (validRoles) {
 				if (result.token) {
-					Cookies.set('mock_jwt', result.token, { expires: 1 / 24 });
+					Cookies.set('mock_jwt', result.token, {
+						expires: 1 / 24,
+					});
+
 					navigate('/dashboard');
 				} else {
 					setError('Token inválido.');

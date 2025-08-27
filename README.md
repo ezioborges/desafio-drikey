@@ -1,3 +1,5 @@
+# Execução do Pojeto
+
 # Desafio Técnico de Front-End | Ezio Borges.
 
 Esse Projeto é a minha solução para o desafio técnico de front-end.
@@ -7,6 +9,58 @@ A plicação permite que o usuário faça login, receba e armazene um token de a
 acesso uma área restrita e renderize dados protegidos.
 <br>
 Também foi desenvolvido uma opção para realizar logout de formna segura.
+
+<details>
+  <summary>
+    <span style="font-size: 2em;"><strong>Como Executar </strong></span>
+  </summary>
+  <!-- conteúdo -->
+  
+Para rodar este projeto localmente, siga os passos abaixo:
+
+1.  **Clone este repositório**
+
+    ```bash
+    git clone https://github.com/ezioborges/desafio-drikey.git
+    ```
+
+2.  **Navegue até o diretório do projeto**
+
+    ```bash
+    cd desafio-drikey
+    ```
+
+3.  **Instale as dependências**
+
+    ```bash
+    npm install
+    ```
+
+4.  **Inicie a aplicação**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Logins**<br>
+
+```bash
+    Admin: admin@drikey.com
+    Senha: Senhaforte12@
+```
+
+```bash
+    Consumer: consumer@drikey.com
+    Senha: Senhaforte12@
+```
+
+```bash
+    Unauthorized: unauthorized@unauthorized.com
+    Senha: Senhaforte12@
+```
+
+</details>
+<br>
 
 # Tecnologias Utilizadas
 
@@ -85,36 +139,3 @@ Também foi desenvolvido uma opção para realizar logout de formna segura.
 - **Exibição de dados protegidos:** Os dados do usuário são obtidos a partir de um token JWT, que é armazenado em um cookie após um login válido. <br>Esse token é usado para exibir informações protegidas.
 - **Funcionalidade de Logout:** Ao clicar em logout, o token é removido do cookie, o usuário é desautenticado e redirecionado para a página de login, <br>encerrando a sessão de forma segura.
   <br><br>
-
-# Execução do Pojeto
-
-# Nome do Projeto
-
-Este é um projeto de exemplo para demonstrar a estrutura de um `README.md`.
-
-## Como Executar
-
-Para rodar este projeto localmente, siga os passos abaixo:
-
-1.  **Clone este repositório**
-
-    ```bash
-    git clone https://github.com/ezioborges/desafio-drikey.git
-    ```
-
-2.  **Navegue até o diretório do projeto**
-
-    ```bash
-    cd desafio-drikey
-    ```
-
-3.  **Instale as dependências**
-
-    ```bash
-    npm install
-    ```
-
-4.  **Inicie a aplicação**
-    ```bash
-    npm run dev
-    ```

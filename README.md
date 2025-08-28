@@ -4,7 +4,7 @@
 
 Esse Projeto é a minha solução para o desafio técnico de front-end.
 <br>
-A plicação permite que o usuário faça login, receba e armazene um token de autenticação,
+Aplicação permite que o usuário faça login, receba e armazene um token de autenticação,
 <br>
 acesso uma área restrita e renderize dados protegidos.
 <br>
